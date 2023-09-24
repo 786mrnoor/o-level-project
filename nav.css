@@ -1,0 +1,49 @@
+nav.topNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px black;
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: white;
+}
+nav.topNav header h1{
+    background-image: linear-gradient(to right bottom, #15376a, #3a578b, #5b78ad, #7d9cd0, #a0c1f4);
+    font-family: 'Brush Script MT';
+    font-size: 34px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-left: 20px;
+}
+nav.topNav .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+nav.topNav .right img{
+    width: 30px;
+    cursor: pointer;
+}
+nav.topNav .search-bar{
+    width: 65%;
+    position: relative;
+}
+nav.topNav .search-bar img{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 25px;
+}
+nav.topNav input{
+    width: 100%;
+    padding: 8px 10px 8px 40px;
+    font-size: 17px;
+    outline: none;
+    background-color: #d2e3ff;
+    border: none;
+    border-radius: 10px;
+}

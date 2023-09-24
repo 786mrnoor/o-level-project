@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="topNav">
+        <header>
+            <h1>E-Commerce</h1>
+        </header>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for Products">
+            <img src="Images/search.svg" alt="">
+        </div>
+        <div class="right">
+            <img src="Images/user.svg" alt="">
+            <img src="Images/cart.svg" alt="">
+        </div>
+    </nav>
+    <div class="carasoul">
+        <button class="previous" onClick="addSlide(-1)"> < </button>
+                <button class="next" onClick="addSlide(1)">></button>
+
+                <div class="dot-container">
+                    <div class="dot" onClick="currentSlide(0)"></div>
+                    <div class="dot" onClick="currentSlide(1)"></div>
+                    <div class="dot" onClick="currentSlide(2)"></div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" alt="">
+                </div>
+    </div>
+
+
+    <div class="products">
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://image01.realme.net/general/20230906/1693972130157e135186bb9304b4a978a37bf185e1a68.png?width=1440&height=1440&size=457703.webp"
+                    alt="">
+            </div>
+            <h4>Xiaomi 12 Pro 5G</h4>
+            <p>₹1999 <span>₹2999</span></p>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://image01.realme.net/general/20230906/1693972130157e135186bb9304b4a978a37bf185e1a68.png?width=1440&height=1440&size=457703.webp"
+                    alt="">
+            </div>
+            <h4>Xiaomi 12 Pro 5G</h4>
+            <div class="review">
+                <p>
+                    <button>4.4</button>
+                    <span>(98)</span>
+                </p>
+            </div>
+            <p>₹1999 <span>₹2999</span></p>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://image01.realme.net/general/20230906/1693972130157e135186bb9304b4a978a37bf185e1a68.png?width=1440&height=1440&size=457703.webp"
+                    alt="">
+            </div>
+            <h4>Xiaomi 12 Pro 5G</h4>
+            <div class="review">
+                <p>
+                    <button>4.4</button>
+                    <span>(98)</span>
+                </p>
+            </div>
+            <p>₹1999 <span>₹2999</span></p>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://image01.realme.net/general/20230906/1693972130157e135186bb9304b4a978a37bf185e1a68.png?width=1440&height=1440&size=457703.webp"
+                    alt="">
+            </div>
+            <h4>Xiaomi 12 Pro 5G</h4>
+            <div class="review">
+                <p>
+                    <button>4.4</button>
+                    <span>(98)</span>
+                </p>
+            </div>
+            <p>₹1999 <span>₹2999</span></p>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://image01.realme.net/general/20230906/1693972130157e135186bb9304b4a978a37bf185e1a68.png?width=1440&height=1440&size=457703.webp"
+                    alt="">
+            </div>
+            <h4>Xiaomi 12 Pro 5G</h4>
+            <div class="review">
+                <p>
+                    <button>4.4</button>
+                    <span>(98)</span>
+                </p>
+            </div>
+            <p>₹1999 <span>₹2999</span></p>
+        </div>
+    </div>
+
+    <script>
+        let product = document.getElementsByClassName('products')[0];
+        let imgs = [
+            'https://image01.realme.net/general/20230906/1693972130157e135186bb9304b4a978a37bf185e1a68.png?width=1440&height=1440&size=457703.webp',
+            'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/c/s/x/-original-imagzjhwaaewgj8r.jpeg?q=70',
+            'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/8/d/b/-original-imagp9s9wfzp8ghf.jpeg?q=70'
+        ]
+        function showProduct() {
+            let txt = '';
+            for (let i = 0; i < 8; i++) {
+                txt += `
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="${imgs[i]}" alt="">
+                    </div>
+                    <h4>Xiaomi 12 Pro 5G</h4>
+                    <p>₹1999 <span>₹2999</span></p>
+                 </div>`
+            }
+            product.innerHTML = txt;
+        }
+        showProduct()
+    </script>
+
+    <script>
+        let index = 0;
+        let slides = document.getElementsByClassName('slide');
+        let dots = document.getElementsByClassName('dot');
+        changeSlide(index);
+
+        function addSlide(n) {
+            index += n;
+            changeSlide();
+        }
+        function currentSlide(n) {
+            index = n;
+            changeSlide();
+        }
+
+        function changeSlide() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+                dots[i].classList.remove('active');
+            }
+            index = index >= slides.length ? 0 : index;
+            index = index < 0 ? slides.length - 1 : index;
+            slides[index].style.display = 'block';
+            dots[index].classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
