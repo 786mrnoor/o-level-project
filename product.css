@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    background-image: linear-gradient(to bottom, #86a8e7, #9eb9ec, #b5c9f0, #cddaf5, #e4ebf9);
+}
+
+img {
+    vertical-align: middle;
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+main .image-section .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+main .image-section .btns button {
+    width: 100%;
+    height: 50px;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    background-color: #fb641b;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.image-container {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(198, 198, 198);
+}
+
+.image-container .images {
+    width: 80px;
+    overflow-y: hidden;
+    /* border: 1px solid rgb(198, 198, 198); */
+}
+
+.image-container .images img {
+    width: 100%;
+    border: 1px solid rgb(198, 198, 198);
+}
+
+.details {
+    padding: 20px;
+}
+
+.image-container .preview {
+    width: 420px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.image-container .preview img {
+    height: 100%;
+    /* width: 100%; */
+}
+
+main .details {
+    padding: 20px;
+}
+
+main .details h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    margin-bottom: 15px;
+    color: rgb(46, 46, 46);
+}
+
+main .details h3.price {
+    font-size: 28px;
+    font-weight: 500px;
+}
+
+main .details h3.price span {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+.products {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.box {
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    padding: 16px;
+    height: 100%;
+}
+
+.products .box .imgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.products .box .imgBox img {
+    height: 200px;
+    /* width: 100%;
+    max-width: 200px; */
+}
+
+.products .box h4 {
+    margin-bottom: 10px;
+}
+
+.products .box p span {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 14px;
+}

@@ -34,13 +34,13 @@
                 </div>
 
                 <div class="slide">
-                    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="">
+                    <img src="https://i03.appmifile.com/340_operator_in/21/09/2023/6540807432a8bac57677caf6f9278280.jpg?f=webp" alt="">
                 </div>
                 <div class="slide">
-                    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" alt="">
+                    <img src="https://i03.appmifile.com/924_operator_in/21/09/2023/50bbf35b520bace7990443bf90d4a67e.jpg?f=webp" alt="">
                 </div>
                 <div class="slide">
-                    <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" alt="">
+                    <img src="https://i03.appmifile.com/982_operator_in/20/09/2023/ee54fe7696e06177609636f32f56d6f6.jpg?f=webp" alt="">
                 </div>
     </div>
 
@@ -112,6 +112,10 @@
         </div>
     </div>
 
+    <footer>
+    
+    </footer>
+
     <script>
         let product = document.getElementsByClassName('products')[0];
         let imgs = [
@@ -121,15 +125,17 @@
         ]
         function showProduct() {
             let txt = '';
-            for (let i = 0; i < 8; i++) {
+            for (let i = 0; i < 50; i++) {
                 txt += `
                 <div class="box">
+                    <a href='product.html'>
                     <div class="imgBox">
                         <img src="${imgs[i]}" alt="">
                     </div>
                     <h4>Xiaomi 12 Pro 5G</h4>
                     <p>₹1999 <span>₹2999</span></p>
-                 </div>`
+                    </a>
+                </div>`
             }
             product.innerHTML = txt;
         }

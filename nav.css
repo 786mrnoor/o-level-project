@@ -35,7 +35,7 @@ nav.topNav .search-bar{
 nav.topNav .search-bar img{
     position: absolute;
     top: 5px;
-    left: 5px;
+    left: 8px;
     width: 25px;
 }
 nav.topNav input{
@@ -44,6 +44,6 @@ nav.topNav input{
     font-size: 17px;
     outline: none;
     background-color: #d2e3ff;
-    border: none;
-    border-radius: 10px;
+        border: none;
+        border-radius: 15px;
 }
